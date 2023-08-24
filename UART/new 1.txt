@@ -1,0 +1,37 @@
+
+Requirement 1 :
+
+Inputs from the user :
+Total no. of GPIO :n
+
+<n -times>
+
+PIN NO. :1|2|3|4|5
+RESPECTIVE PORT :A|B|C|D
+MODE : 0|1
+PULL :ON|off (0|1)
+
+create Array of structure:
+
+GPIO_INIT [n] [PIN,PORT,MODE,PULL]
+
+Print the array of structure
+===================================================
+
+Requirement 2:
+
+Generate a .c file
+
+code with user structure values:
+
+GPIO_INIT[0].PIN=3
+GPIO_INIT[0].PORT=A
+GPIO_INIT[0].MODE=INPUT
+GPIO_INIT[0].PULL=OFF
+
+GPIO_INIT[1].PIN=4
+GPIO_INIT[1].PORT=D
+GPIO_INIT[1].MODE=OUTPUT
+GPIO_INIT[1].PULL=ON
+
+======================================
