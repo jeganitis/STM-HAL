@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-st-nucleo-c031c6",
+      "id": "nucleo",
+      "top": -37.71,
+      "left": -264.45,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd2004",
+      "id": "lcd1",
+      "top": -41.28,
+      "left": 114.24,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "$serialMonitor:TX", "nucleo:PA3", "", [] ],
+    [ "$serialMonitor:RX", "nucleo:PA2", "", [] ],
+    [ "nucleo:GND.9", "lcd1:GND", "black", [ "h11.52", "v-47.86", "h115.2", "v9.6" ] ],
+    [ "lcd1:VCC", "nucleo:5V.1", "red", [ "h-28.8", "v-134.3", "h-355.2", "v206.4", "h34.13" ] ],
+    [ "lcd1:SCL", "nucleo:PB8", "green", [ "h-95.54", "v19.67" ] ],
+    [ "lcd1:SDA", "nucleo:PB9", "green", [ "h-67.11", "v2.32" ] ]
+  ],
+  "dependencies": {}
+}
