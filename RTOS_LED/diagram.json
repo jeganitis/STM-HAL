@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-st-nucleo-c031c6", "id": "nucleo", "top": -10, "left": 99.34, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 108.13,
+      "left": -67.39,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 147.42,
+      "left": 3.07,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 224.8,
+      "left": -70.07,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 269.42,
+      "left": -13.6,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "$serialMonitor:TX", "nucleo:PA3", "", [] ],
+    [ "$serialMonitor:RX", "nucleo:PA2", "", [] ],
+    [ "led1:A", "r1:1", "green", [ "v0" ] ],
+    [ "nucleo:PA5", "r1:2", "green", [ "h0" ] ],
+    [ "led1:C", "nucleo:GND.1", "green", [ "v0" ] ],
+    [ "led2:A", "r2:1", "green", [ "v0" ] ],
+    [ "r2:2", "nucleo:PA6", "green", [ "v0" ] ],
+    [ "led2:C", "nucleo:GND.1", "green", [ "v47.2", "h144.24", "v-104.67" ] ]
+  ],
+  "dependencies": {}
+}
